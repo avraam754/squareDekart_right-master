@@ -50,7 +50,48 @@ namespace testSquareDekart
             listBoxAnswersI.DataSource = decLabelI.GetListAnswers();
            
         }
+        private void buttonAddAnswerII_Click(object sender, EventArgs e)
+        {
+            FormAddAnswer form = new FormAddAnswer(decLabelII);
+            form.ShowDialog();
+            listBoxAnswersII.DataSource = decLabelII.GetListAnswers();
+        }
 
+        private void buttonEditAnswerII_Click(object sender, EventArgs e)
+        {
+            int index = listBoxAnswersII.SelectedIndex;
+            FormEditAnswer form = new FormEditAnswer(decLabelII.GetAnswer(index));
+            form.ShowDialog();
+            listBoxAnswersII.DataSource = decLabelII.GetListAnswers();
+        }
+        private void buttonAddAnswerIII_Click(object sender, EventArgs e)
+        {
+            FormAddAnswer form = new FormAddAnswer(decLabelIII);
+            form.ShowDialog();
+            listBoxAnswersIII.DataSource = decLabelIII.GetListAnswers();
+        }
+
+        private void buttonEditAnswerIII_Click(object sender, EventArgs e)
+        {
+            int index = listBoxAnswersIII.SelectedIndex;
+            FormEditAnswer form = new FormEditAnswer(decLabelIII.GetAnswer(index));
+            form.ShowDialog();
+            listBoxAnswersIII.DataSource = decLabelIII.GetListAnswers();
+        }
+        private void buttonAddAnswerIV_Click(object sender, EventArgs e)
+        {
+            FormAddAnswer form = new FormAddAnswer(decLabelIV);
+            form.ShowDialog();
+            listBoxAnswersIV.DataSource = decLabelIV.GetListAnswers();
+        }
+
+        private void buttonEditAnswerIV_Click(object sender, EventArgs e)
+        {
+            int index = listBoxAnswersIV.SelectedIndex;
+            FormEditAnswer form = new FormEditAnswer(decLabelIV.GetAnswer(index));
+            form.ShowDialog();
+            listBoxAnswersIV.DataSource = decLabelIV.GetListAnswers();
+        }
         private void labelTitleI_Click(object sender, EventArgs e)
         {
 
@@ -70,5 +111,17 @@ namespace testSquareDekart
         {
 
         }
+
+        private void listBoxAnswersI_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxAnswersIII_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

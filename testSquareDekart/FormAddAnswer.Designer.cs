@@ -50,6 +50,7 @@
             this.textBoxPoint.Name = "textBoxPoint";
             this.textBoxPoint.Size = new System.Drawing.Size(100, 44);
             this.textBoxPoint.TabIndex = 1;
+            this.textBoxPoint.TextChanged += new System.EventHandler(this.textBoxPoint_TextChanged);
             // 
             // label1
             // 

@@ -26,8 +26,8 @@ namespace testSquareDekart
         {
             try
             {
-                if(!(Convert.ToInt32(textBoxPoint.Text)>0 && Convert.ToInt32(textBoxPoint.Text)<=5))
-                    throw new Exception("Добавьте в вес число от 1 до 5");
+                if(!(Convert.ToInt32(textBoxPoint.Text)>0 && Convert.ToInt32(textBoxPoint.Text)<=10))
+                    throw new Exception("Добавьте в вес число от 1 до 10");
                 if (string.IsNullOrEmpty(textBoxAnswer.Text))
                     throw new Exception("Заполните ответ");
                 Answer a = new Answer(textBoxAnswer.Text,
@@ -39,6 +39,11 @@ namespace testSquareDekart
             {
                 MessageBox.Show(er.Message);
             }
+        }
+
+        private void textBoxPoint_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
