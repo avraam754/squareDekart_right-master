@@ -75,7 +75,10 @@ namespace squareDekart
 
         public Answer GetAnswer(int index)
         {
-            return answers[index];
+            if (answers.Count == 0)
+                return null;
+            else
+                return answers[index];
         }
 
         public string Title

@@ -45,10 +45,18 @@ namespace testSquareDekart
         private void buttonEditAnswer_Click(object sender, EventArgs e)
         {
             int index = listBoxAnswersI.SelectedIndex;
-            FormEditAnswer form = new FormEditAnswer(decLabelI.GetAnswer(index));
-            form.ShowDialog();
-            listBoxAnswersI.DataSource = decLabelI.GetListAnswers();
-           
+            var n = decLabelI.GetAnswer(index);
+            if (n != null)
+            {
+                FormEditAnswer form = new FormEditAnswer(decLabelI.GetAnswer(index));
+                form.ShowDialog();
+                listBoxAnswersI.DataSource = decLabelI.GetListAnswers();
+            }
+            else
+            {
+                MessageBox.Show("Добавьте ответ");
+            }
+        
         }
         private void buttonAddAnswerII_Click(object sender, EventArgs e)
         {
@@ -60,9 +68,17 @@ namespace testSquareDekart
         private void buttonEditAnswerII_Click(object sender, EventArgs e)
         {
             int index = listBoxAnswersII.SelectedIndex;
-            FormEditAnswer form = new FormEditAnswer(decLabelII.GetAnswer(index));
-            form.ShowDialog();
-            listBoxAnswersII.DataSource = decLabelII.GetListAnswers();
+            var n = decLabelII.GetAnswer(index);
+            if (n != null)
+            {
+                FormEditAnswer form = new FormEditAnswer(decLabelII.GetAnswer(index));
+                form.ShowDialog();
+                listBoxAnswersII.DataSource = decLabelII.GetListAnswers();
+            }
+            else
+            {
+                MessageBox.Show("Добавьте ответ");
+            }
         }
         private void buttonAddAnswerIII_Click(object sender, EventArgs e)
         {
@@ -74,9 +90,17 @@ namespace testSquareDekart
         private void buttonEditAnswerIII_Click(object sender, EventArgs e)
         {
             int index = listBoxAnswersIII.SelectedIndex;
-            FormEditAnswer form = new FormEditAnswer(decLabelIII.GetAnswer(index));
-            form.ShowDialog();
-            listBoxAnswersIII.DataSource = decLabelIII.GetListAnswers();
+            var n = decLabelIII.GetAnswer(index);
+            if (n != null)
+            {
+                FormEditAnswer form = new FormEditAnswer(decLabelIII.GetAnswer(index));
+                form.ShowDialog();
+                listBoxAnswersIII.DataSource = decLabelIII.GetListAnswers();
+            }
+            else
+            {
+                MessageBox.Show("Добавьте ответ");
+            }
         }
         private void buttonAddAnswerIV_Click(object sender, EventArgs e)
         {
@@ -88,9 +112,17 @@ namespace testSquareDekart
         private void buttonEditAnswerIV_Click(object sender, EventArgs e)
         {
             int index = listBoxAnswersIV.SelectedIndex;
-            FormEditAnswer form = new FormEditAnswer(decLabelIV.GetAnswer(index));
-            form.ShowDialog();
-            listBoxAnswersIV.DataSource = decLabelIV.GetListAnswers();
+            var n = decLabelIV.GetAnswer(index);
+            if (n != null)
+            {
+                FormEditAnswer form = new FormEditAnswer(decLabelIV.GetAnswer(index));
+                form.ShowDialog();
+                listBoxAnswersIV.DataSource = decLabelIV.GetListAnswers();
+            }
+            else
+            {
+                MessageBox.Show("Добавьте ответ");
+            }
         }
         private void labelTitleI_Click(object sender, EventArgs e)
         {
