@@ -43,5 +43,10 @@ namespace testSquareDekart
         {
 
         }
+
+        private void textBoxPoint_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

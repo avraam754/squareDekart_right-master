@@ -51,6 +51,7 @@ namespace testSquareDekart
                 FormEditAnswer form = new FormEditAnswer(decLabelI.GetAnswer(index));
                 form.ShowDialog();
                 listBoxAnswersI.DataSource = decLabelI.GetListAnswers();
+
             }
             else
             {
@@ -154,6 +155,9 @@ namespace testSquareDekart
 
         }
 
-        
+        private void buttonResult_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
