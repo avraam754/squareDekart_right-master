@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SumPoint.cs" />
     <EmbeddedResource Include="FormAddAnswer.resx">
       <DependentUpon>FormAddAnswer.cs</DependentUpon>
     </EmbeddedResource>

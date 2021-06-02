@@ -33,6 +33,13 @@ namespace testSquareDekart
                 Answer a = new Answer(textBoxAnswer.Text,
                                 Convert.ToInt32(textBoxPoint.Text));
                 dec.Add(a);
+                switch (dec.Title)
+                {
+                    case "Что будет если это произойдет": SumPoint.sumPoint1 += a.Point; break;
+                    case "Что будет если это не произойдет": SumPoint.sumPoint2 += a.Point; break;
+                    case "Чего не будет если это произойдет": SumPoint.sumPoint3 += a.Point; break;
+                    case "Чего не будет если это не произойдет": SumPoint.sumPoint4 += a.Point; break;
+                }
                 this.Close();
             }
             catch (Exception er)

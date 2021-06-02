@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 using squareDekart;
 
 
@@ -29,16 +31,17 @@ namespace testSquareDekart
             //dec.Add(a);
             //dec.Add(b);
             listBoxAnswersI.DataSource = decLabelI.GetListAnswers();
-            labelTitleI.Text = decLabelI.Title  + " " + decLabelI.SumPoint();
-            labelTitleII.Text = decLabelII.Title + " " + decLabelII.SumPoint();
-            labelTitleIII.Text = decLabelIII.Title + " " + decLabelIII.SumPoint();
-            labelTitleIV.Text = decLabelIV.Title + " " + decLabelIV.SumPoint();
+            labelTitleI.Text = decLabelI.Title;
+            labelTitleII.Text = decLabelII.Title;
+            labelTitleIII.Text = decLabelIII.Title;
+            labelTitleIV.Text = decLabelIV.Title;            
         }
 
         private void buttonAddAnswer_Click(object sender, EventArgs e)
         {
             FormAddAnswer form = new FormAddAnswer(decLabelI);
             form.ShowDialog();
+            labelSum1.Text = SumPoint.sumPoint1.ToString();
             listBoxAnswersI.DataSource = decLabelI.GetListAnswers();
         }
 
@@ -63,6 +66,7 @@ namespace testSquareDekart
         {
             FormAddAnswer form = new FormAddAnswer(decLabelII);
             form.ShowDialog();
+            labelSum2.Text = SumPoint.sumPoint2.ToString();
             listBoxAnswersII.DataSource = decLabelII.GetListAnswers();
         }
 
@@ -85,6 +89,7 @@ namespace testSquareDekart
         {
             FormAddAnswer form = new FormAddAnswer(decLabelIII);
             form.ShowDialog();
+            labelSum3.Text = SumPoint.sumPoint3.ToString();
             listBoxAnswersIII.DataSource = decLabelIII.GetListAnswers();
         }
 
@@ -107,6 +112,7 @@ namespace testSquareDekart
         {
             FormAddAnswer form = new FormAddAnswer(decLabelIV);
             form.ShowDialog();
+            labelSum4.Text = SumPoint.sumPoint4.ToString();
             listBoxAnswersIV.DataSource = decLabelIV.GetListAnswers();
         }
 
@@ -156,6 +162,27 @@ namespace testSquareDekart
         }
 
         private void buttonResult_Click(object sender, EventArgs e)
+        {
+            int Sum1 = Convert.ToInt32(labelSum1.Text);
+            int Sum2 = Convert.ToInt32(labelSum2.Text);
+            int Sum3 = Convert.ToInt32(labelSum3.Text);
+            int Sum4 = Convert.ToInt32(labelSum4.Text);
+            MessageBox.Show("За: " + (Sum1 - Sum3) + " Против: " + (Sum2 - Sum4));
+        }
+
+        private void buttonSaveToFile_Click(object sender, EventArgs e)
+        {
+            SaveToFile();
+        }
+        public void SaveToFile()
+        {
+            var answerJson = JsonConvert.SerializeObject(decLabelI.GetListAnswers());
+            answerJson = JsonConvert.SerializeObject(decLabelII.GetListAnswers());
+            using (StreamWriter sw = new StreamWriter("listmeets.json"))
+                sw.WriteLine(answerJson);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

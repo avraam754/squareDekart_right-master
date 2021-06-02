@@ -73,10 +73,10 @@ namespace squareDekart
             return temp;
         }
 
-       /* public int GetSumAnswers()
-        {
+        //public int GetSumAnswers()
+        //{
             
-        }*/
+        //}
 
         public Answer GetAnswer(int index)
         {
