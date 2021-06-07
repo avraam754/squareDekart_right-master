@@ -14,6 +14,8 @@ namespace testSquareDekart
         QuestDekart decLabelII;
         QuestDekart decLabelIII;
         QuestDekart decLabelIV;
+        QuestDekart mainTitle;
+
         public FormMain()
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace testSquareDekart
         {
             //Answer a = new Answer("Чяго", 2);
             //Answer b = new Answer("НиЧяго", 5);
+            mainTitle = new QuestDekart("Введите вопрос");
             decLabelI = new QuestDekart("Что будет если это произойдет");
             decLabelII = new QuestDekart("Что будет если это не произойдет");
             decLabelIII = new QuestDekart("Чего не будет если это произойдет");
@@ -34,7 +37,8 @@ namespace testSquareDekart
             labelTitleI.Text = decLabelI.Title;
             labelTitleII.Text = decLabelII.Title;
             labelTitleIII.Text = decLabelIII.Title;
-            labelTitleIV.Text = decLabelIV.Title;            
+            labelTitleIV.Text = decLabelIV.Title;
+            labelMainTitle.Text = mainTitle.Title;
         }
 
         private void buttonAddAnswer_Click(object sender, EventArgs e)
@@ -178,6 +182,8 @@ namespace testSquareDekart
         {
             var answerJson = JsonConvert.SerializeObject(decLabelI.GetListAnswers());
             answerJson = JsonConvert.SerializeObject(decLabelII.GetListAnswers());
+            answerJson = JsonConvert.SerializeObject(decLabelIII.GetListAnswers());
+            answerJson = JsonConvert.SerializeObject(decLabelII.GetListAnswers());
             using (StreamWriter sw = new StreamWriter("listmeets.json"))
                 sw.WriteLine(answerJson);
         }
@@ -186,5 +192,27 @@ namespace testSquareDekart
         {
 
         }
+        private void buttonLoadFromFile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelSum3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMainTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+        /*public void LoadFromFile()
+{
+using (StreamReader sr = new StreamReader("listmeets.json"))
+{
+listMeets = JsonConvert.DeserializeObject<List<Meet>>(sr.ReadToEnd());
+}
+}
+*/
     }
 }
