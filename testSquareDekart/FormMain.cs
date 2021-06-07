@@ -62,7 +62,7 @@ namespace testSquareDekart
             }
             else
             {
-                MessageBox.Show("Добавьте ответ");
+                MessageBox.Show("Добавьте аргумент");
             }
         
         }
@@ -86,7 +86,7 @@ namespace testSquareDekart
             }
             else
             {
-                MessageBox.Show("Добавьте ответ");
+                MessageBox.Show("Добавьте аргумент");
             }
         }
         private void buttonAddAnswerIII_Click(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace testSquareDekart
             }
             else
             {
-                MessageBox.Show("Добавьте ответ");
+                MessageBox.Show("Добавьте аргумент");
             }
         }
         private void buttonAddAnswerIV_Click(object sender, EventArgs e)
@@ -132,7 +132,7 @@ namespace testSquareDekart
             }
             else
             {
-                MessageBox.Show("Добавьте ответ");
+                MessageBox.Show("Добавьте аргумент");
             }
         }
         private void labelTitleI_Click(object sender, EventArgs e)

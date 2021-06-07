@@ -38,17 +38,19 @@
             // textBoxAnswer
             // 
             this.textBoxAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAnswer.Location = new System.Drawing.Point(47, 86);
+            this.textBoxAnswer.Location = new System.Drawing.Point(63, 106);
+            this.textBoxAnswer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxAnswer.Name = "textBoxAnswer";
-            this.textBoxAnswer.Size = new System.Drawing.Size(459, 44);
+            this.textBoxAnswer.Size = new System.Drawing.Size(611, 53);
             this.textBoxAnswer.TabIndex = 0;
             // 
             // textBoxPoint
             // 
             this.textBoxPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPoint.Location = new System.Drawing.Point(49, 191);
+            this.textBoxPoint.Location = new System.Drawing.Point(63, 236);
+            this.textBoxPoint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPoint.Name = "textBoxPoint";
-            this.textBoxPoint.Size = new System.Drawing.Size(100, 44);
+            this.textBoxPoint.Size = new System.Drawing.Size(132, 53);
             this.textBoxPoint.TabIndex = 1;
             this.textBoxPoint.TextChanged += new System.EventHandler(this.textBoxPoint_TextChanged);
             // 
@@ -56,28 +58,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(47, 33);
+            this.label1.Location = new System.Drawing.Point(63, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 37);
+            this.label1.Size = new System.Drawing.Size(390, 46);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Добавить ответ";
+            this.label1.Text = "Добавить аргумент";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(47, 151);
+            this.label2.Location = new System.Drawing.Point(63, 186);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(313, 37);
+            this.label2.Size = new System.Drawing.Size(487, 46);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Добавить вес ответа";
+            this.label2.Text = "Добавить вес аргумента";
             // 
             // buttonAddAnswer
             // 
             this.buttonAddAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddAnswer.Location = new System.Drawing.Point(47, 272);
+            this.buttonAddAnswer.Location = new System.Drawing.Point(63, 335);
+            this.buttonAddAnswer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonAddAnswer.Name = "buttonAddAnswer";
-            this.buttonAddAnswer.Size = new System.Drawing.Size(459, 48);
+            this.buttonAddAnswer.Size = new System.Drawing.Size(612, 59);
             this.buttonAddAnswer.TabIndex = 4;
             this.buttonAddAnswer.Text = "Сохранить ответ";
             this.buttonAddAnswer.UseVisualStyleBackColor = true;
@@ -85,16 +90,18 @@
             // 
             // FormAddAnswer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 401);
+            this.ClientSize = new System.Drawing.Size(827, 494);
             this.Controls.Add(this.buttonAddAnswer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPoint);
             this.Controls.Add(this.textBoxAnswer);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormAddAnswer";
-            this.Text = "Добавить ответ";
+            this.Text = "Добавить аргумент";
+            this.Load += new System.EventHandler(this.FormAddAnswer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

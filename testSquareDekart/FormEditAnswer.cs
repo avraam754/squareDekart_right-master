@@ -28,7 +28,7 @@ namespace testSquareDekart
             try
             {
                 if (string.IsNullOrEmpty(textBoxAnswer.Text))
-                    throw new Exception("Заполните ответ");
+                    throw new Exception("Заполните поле аргумента");
                 ans.AnswerText = textBoxAnswer.Text;
                 ans.Point = Convert.ToInt32(textBoxPoint.Text);
                 this.Close();
